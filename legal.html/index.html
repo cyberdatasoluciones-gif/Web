@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style-analisis.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Datos | CyberData</title>
+    <!-- Nuevas Fuentes Tecnológicas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- =========================================
+         Panel Flotante: Servicios que quiero
+         ========================================= -->
+    <div id="panel-presupuesto" class="panel-presupuesto">
+        <h3>Servicios que quiero</h3>
+        
+        <ul id="lista-servicios-elegidos" class="lista-elegidos">
+            <li class="mensaje-vacio">Aún no has seleccionado servicios.</li>
+        </ul>
+        
+        <!-- Botón para enviar el WhatsApp -->
+        <a href="#" id="btn-enviar-presupuesto" class="btn-main btn-bloque" target="_blank">Solicitar presupuesto</a>
+    </div>
+
+    <!-- Header / Navegación -->
+    <header>
+        <div class="logo">CyberData</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#metodologia">Metodología</a></li>
+                <li><a href="index.html#contacto" class="btn-cta">Agendar Cita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cabecera del Servicio -->
+    <section id="analisis-hero" class="hero servicio-hero-animado">
+        <div class="hero-contenido">
+            <h1>Protección para tu futuro <br><span>"Aseguramos tu éxito"</span></h1>
+            <p>Transformamos la información cruda de tu empresa en activos estratégicos medibles y rentables.</p>
+        </div>
+    </section>
+<!-- Detalle de los Servicios en vertical -->
+    <section class="servicio-detalle">
+        <div class="detalle-contenido layout-vertical">
+            
+            <h2>¿Qué incluye esta solución?</h2>
+         <!-- Tarjeta 1: Registro de Marca -->
+            <div class="tarjeta-vertical">
+                <img src="img/marca.jpg" alt="Registro de Marca" class="img-tarjeta">
+                <h3><span class="viñeta">▹</span> Registro de Marca</h3>
+                <p>Protegemos la identidad de tu empresa en el mercado. Gestionamos la búsqueda de antecedentes y el registro formal de tu marca para asegurar el uso exclusivo de tus activos intangibles, blindando tu reputación ante competidores.</p>
+                <!-- Botón Agregar -->
+                <button class="btn-agregar" data-servicio="Registro de Marca">+ Agregar</button>
+            </div>
+
+            <!-- Tarjeta 2: Registro de Patentes -->
+            <div class="tarjeta-vertical">
+                <img src="img/patente.jpg" alt="Registro de Patentes" class="img-tarjeta">
+                <h3><span class="viñeta">▹</span> Registro de Patentes</h3>
+                <p>Resguardamos tus innovaciones y desarrollos tecnológicos. Te acompañamos en todo el proceso de patentamiento para garantizar la propiedad intelectual de tus creaciones, maximizando su valor comercial y previniendo el plagio.</p>
+                <!-- Botón Agregar -->
+                <button class="btn-agregar" data-servicio="Registro de Patentes">+ Agregar</button>
+            </div>
+
+            <!-- Tarjeta 3: Societario y Tributario -->
+            <div class="tarjeta-vertical">
+                <img src="img/societario.jpg" alt="Derecho Societario y Tributario" class="img-tarjeta">
+                <h3><span class="viñeta">▹</span> Derecho Societario y Tributario</h3>
+                <p>Estructuramos el marco legal y fiscal de tu negocio. Desde la constitución ágil de sociedades hasta la planificación tributaria estratégica, asegurando el cumplimiento normativo estricto y la optimización inteligente de tus recursos financieros.</p>
+                <!-- Botón Agregar -->
+                <button class="btn-agregar" data-servicio="Derecho Societario y Tributario">+ Agregar</button>
+            </div>
+
+            <!-- Tarjeta 4: Derecho Laboral -->
+            <div class="tarjeta-vertical">
+                <img src="img/labora.jpg" alt="Derecho Laboral" class="img-tarjeta">
+                <h3><span class="viñeta">▹</span> Derecho Laboral</h3>
+                <p>Blindaje legal para tus relaciones de trabajo. Brindamos asesoramiento preventivo en contrataciones, regulaciones de teletrabajo y resolución de conflictos, adaptando la estructura de tu empresa a las normativas y dinámicas del mercado actual.</p>
+                <!-- Botón Agregar -->
+                <button class="btn-agregar" data-servicio="Derecho Laboral">+ Agregar</button>
+            </div>
+
+            <!-- Tarjeta 5: Derecho del Consumidor -->
+            <div class="tarjeta-vertical">
+                <img src="img/consumidor.jpg" alt="Derecho del Consumidor" class="img-tarjeta">
+                <h3><span class="viñeta">▹</span> Derecho del Consumidor</h3>
+                <p>Aseguramos que tus operaciones comerciales, plataformas de e-commerce y términos de servicio cumplan con las normativas vigentes. Minimizamos riesgos de litigios, evitamos sanciones y fortalecemos la confianza de tus clientes.</p>
+                <!-- Botón Agregar -->
+                <button class="btn-agregar" data-servicio="Derecho del Consumidor">+ Agregar</button>
+            </div>
+
+            <div class="acciones-servicio">
+                <a href="../index.html#contacto" class="btn-main">Contáctanos</a>
+                <a href="../index.html#servicios" class="btn-volver">&larr; Volver a Servicios</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Scripts para Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+            el: "#analisis-hero",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x39ff14, 
+            backgroundColor: 0x050505, 
+            points: 12.00,
+            maxDistance: 20.00,
+            spacing: 20.00
+        })
+    </script>
+</body>
+<!-- =========================================
+         Script del Panel de Presupuesto (Carrito)
+         ========================================= -->
+    <script>
+        // ¡IMPORTANTE! Cambia esto por tu número real (Ej: 5492615555555)
+        const NUMERO_WHATSAPP = "542613672949"; 
+        
+        // 1. Leer los servicios de la memoria del navegador
+        let serviciosElegidos = JSON.parse(localStorage.getItem('carritoCyberData')) || [];
+        
+        const listaHTML = document.getElementById('lista-servicios-elegidos');
+        const btnEnviar = document.getElementById('btn-enviar-presupuesto');
+        const botonesAgregar = document.querySelectorAll('.btn-agregar');
+
+        // 2. Función para actualizar lo que se ve en pantalla
+        function actualizarPanel() {
+            listaHTML.innerHTML = ''; 
+            
+            if (serviciosElegidos.length === 0) {
+                listaHTML.innerHTML = '<li class="mensaje-vacio">Aún no has seleccionado servicios.</li>';
+                btnEnviar.href = "#"; 
+                btnEnviar.style.opacity = "0.5"; // Lo opacamos un poco si está vacío
+                btnEnviar.style.pointerEvents = "none"; // Evita que hagan clic
+            } else {
+                let textoWhatsApp = "Hola CyberData, me gustaría solicitar un presupuesto para los siguientes servicios:%0A";
+                
+                serviciosElegidos.forEach((servicio, index) => {
+                    // Crear el elemento de la lista
+                    const li = document.createElement('li');
+                    li.textContent = servicio;
+                    listaHTML.appendChild(li);
+                    
+                    // Sumarlo al texto de WhatsApp
+                    textoWhatsApp += "%0A- " + servicio;
+                });
+                
+                // Activar el botón de WhatsApp
+                btnEnviar.href = `https://wa.me/${NUMERO_WHATSAPP}?text=${textoWhatsApp}`;
+                btnEnviar.style.opacity = "1";
+                btnEnviar.style.pointerEvents = "auto";
+            }
+            
+            // Guardar los datos actualizados en la memoria
+            localStorage.setItem('carritoCyberData', JSON.stringify(serviciosElegidos));
+        }
+
+        // 3. Hacer que los botones funcionen al hacer clic
+        botonesAgregar.forEach(boton => {
+            boton.addEventListener('click', function() {
+                const nombreServicio = this.getAttribute('data-servicio');
+                
+                // Si el servicio no está en la lista, lo agregamos
+                if (!serviciosElegidos.includes(nombreServicio)) {
+                    serviciosElegidos.push(nombreServicio);
+                    actualizarPanel();
+                    
+                    // Efecto visual de confirmación en el botón
+                    const textoOriginal = this.textContent;
+                    this.textContent = "¡Agregado!";
+                    this.style.backgroundColor = "var(--accent-color)";
+                    this.style.color = "#000";
+                    
+                    // Volver a la normalidad después de 1.5 segundos
+                    setTimeout(() => {
+                        this.textContent = textoOriginal;
+                        this.style.backgroundColor = "";
+                        this.style.color = "";
+                    }, 1500);
+                } else {
+                    // Si ya estaba agregado, le avisamos
+                    this.textContent = "Ya está en la lista";
+                    setTimeout(() => {
+                        this.textContent = "+ Agregar";
+                    }, 1500);
+                }
+            });
+        });
+
+        // 4. Arrancar el panel apenas carga la página
+        actualizarPanel();
+    </script>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberData IT| Soluciones Integrales en Datos y Estrategia Legal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =========================================
+         Panel Flotante: Servicios que quiero
+         ========================================= -->
+    <div id="panel-presupuesto" class="panel-presupuesto">
+        <h3>Servicios que quiero</h3>
+        
+        <!-- Aquí JavaScript insertará los servicios elegidos -->
+        <ul id="lista-servicios-elegidos" class="lista-elegidos">
+            <li class="mensaje-vacio">Aún no has seleccionado servicios.</li>
+        </ul>
+        
+        <!-- Botón para enviar el WhatsApp -->
+        <a href="#" id="btn-enviar-presupuesto" class="btn-main btn-bloque" target="_blank">Solicitar presupuesto</a>
+    </div>
+
+    <!-- Header / Navegación -->
+    <header>
+        <div class="logo">CyberData IT</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <!-- Código nuevo -->
+<li><a href="https://wa.me/+542613672949?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20con%20CyberData" class="btn-cta" target="_blank">Agendar Cita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero con Fondo Animado -->
+    <section id="inicio" class="hero">
+        <div class="hero-contenido">
+            <h1>Transformamos tu empresa con <br><span>Datos y Estrategia Legal</span></h1>
+            <p>Integración de análisis, automatización y cumplimiento normativo para negocios modernos.</p>
+            <a href="#contacto" class="btn-main">Comienza tu transformación</a>
+        </div>
+    </section>
+ <!-- =========================================
+         Sección: Ofertas del Mes (Packs Estratégicos)
+         ========================================= -->
+    <section id="ofertas-mes">
+        <h2>Ofertas del Mes !</h2>
+        <p class="desc-ofertas">Soluciones integrales combinadas para potenciar tu negocio sin complicaciones.</p>
+        
+        <div class="contenedor-ofertas">
+            
+            <!-- Pack 1 -->
+            <div class="tarjeta-oferta">
+                <span class="badge-oferta">Pack 1</span>
+                <h3>Blindaje Comercial & Digital</h3>
+                <p><strong>Incluye:</strong> Registro de Marca + Estrategia de Marketing + Diseño de Página Web.</p>
+                <p class="precio-oferta"><strong>Inversión sugerida:</strong> $750 USD</p>
+                <p class="oferta-beneficio">Ideal para nuevos negocios que buscan proteger sus activos y salir al mercado con presencia digital y tracción comercial inmediata.</p>
+                <button class="btn-agregar" data-servicio="Pack 1: Blindaje Comercial & Digital">+ Agregar</button>
+            </div>
+
+            <!-- Pack 2 -->
+            <div class="tarjeta-oferta">
+                <span class="badge-oferta">Pack 2</span>
+                <h3>Operación Autónoma 360°</h3>
+                <p><strong>Incluye:</strong> Desarrollo Full-stack + Agentes Conversacionales con IA + Facturación Inteligente.</p>
+                <p class="precio-oferta"><strong>Inversión sugerida:</strong> $1,400 USD</p>
+                <p class="oferta-beneficio">Escala tu operación sin aumentar carga administrativa combinando software a medida, atención 24/7 y cobros autónomos.</p>
+                <button class="btn-agregar" data-servicio="Pack 2: Operación Autónoma 360°">+ Agregar</button>
+            </div>
+
+            <!-- Pack 3 -->
+            <div class="tarjeta-oferta">
+                <span class="badge-oferta">Pack 3</span>
+                <h3>Ecosistema de Datos & Conversión</h3>
+                <p><strong>Incluye:</strong> Análisis de Datos + Google y Meta Ads + Telemetría e Integración IoT.</p>
+                <p class="precio-oferta"><strong>Inversión sugerida:</strong> $950 USD</p>
+                <p class="oferta-beneficio">Diseñado para medir el rendimiento real de tus inversiones conectando pauta digital con tableros de control avanzados.</p>
+                <button class="btn-agregar" data-servicio="Pack 3: Ecosistema de Datos & Conversión">+ Agregar</button>
+            </div>
+
+            <!-- Pack 6 -->
+            <div class="tarjeta-oferta">
+                <span class="badge-oferta">Pack 6</span>
+                <h3>Inteligencia Operativa & IoT</h3>
+                <p><strong>Incluye:</strong> Telemetría e Integración IoT + Análisis de Datos + Desarrollo Back-end.</p>
+                <p class="precio-oferta"><strong>Inversión sugerida:</strong> $1,200 USD</p>
+                <p class="oferta-beneficio">Captura datos de máquinas o procesos en tiempo real y transfórmalos en métricas clave para la toma de decisiones.</p>
+                <button class="btn-agregar" data-servicio="Pack 6: Inteligencia Operativa & IoT">+ Agregar</button>
+            </div>
+
+            <!-- Pack 7 -->
+            <div class="tarjeta-oferta">
+                <span class="badge-oferta">Pack 7</span>
+                <h3>Posicionamiento & Captura 24/7</h3>
+                <p><strong>Incluye:</strong> Estrategia de Marketing + Google y Meta Ads + Agentes Conversacionales con IA.</p>
+                <p class="precio-oferta"><strong>Inversión sugerida:</strong> $850 USD</p>
+                <p class="oferta-beneficio">Atrae tráfico calificado con pautas y resuelve el cuello de botella tradicional calificando leads automáticamente a cualquier hora.</p>
+                <button class="btn-agregar" data-servicio="Pack 7: Posicionamiento & Captura 24/7">+ Agregar</button>
+            </div>
+
+            <!-- Pack 8 -->
+            <div class="tarjeta-oferta">
+                <span class="badge-oferta">Pack 8</span>
+                <h3>Blindaje de Innovación & Propiedad Intelectual</h3>
+                <p><strong>Incluye:</strong> Registro de Patentes + Desarrollo Front-end + Mantenimiento Web.</p>
+                <p class="precio-oferta"><strong>Inversión sugerida:</strong> $1,100 USD</p>
+                <p class="oferta-beneficio">Protege legalmente tus creaciones tecnológicas contra el plagio mientras mantienes tu plataforma rápida, estable y blindada.</p>
+                <button class="btn-agregar" data-servicio="Pack 8: Blindaje de Innovación & Propiedad Intelectual">+ Agregar</button>
+            </div>
+
+        </div>
+    </section>
+    <!-- Servicios -->
+    <section id="servicios">
+        <h2>Nuestras Soluciones</h2>
+        <div class="cards-container">
+            
+            <!-- TARJETA ENLACE: Reemplaza "analisis.html" con el nombre real de tu página -->
+            <a href="analisis.html" class="card">
+                <h3>Análisis de Datos</h3>
+                <p>Tomamos decisiones basadas en datos reales para maximizar tu rentabilidad y visibilidad.</p>
+                <span class="btn-ver-mas">Ver detalles &rarr;</span>
+            </a>
+            
+            <a href="web.html" class="card">
+                <h3>Diseño de Página Web</h3>
+                <p>Desarrollamos entornos digitales rápidos, planos y optimizados para la conversión.</p>
+                <span class="btn-ver-mas">Ver detalles &rarr;</span>
+            </a>
+            
+            <!-- NUEVA TARJETA: Estrategia de Marketing -->
+            <a href="marketing.html" class="card">
+                <h3>Estrategia de Marketing</h3>
+                <p>Campañas integrales y posicionamiento de marca para conectar con tu audiencia y crecer tu presencia online.</p>
+                <span class="btn-ver-mas">Ver detalles &rarr;</span>
+            </a>
+
+            <a href="software.html" class="card">
+                <h3>Desarrollo de Software</h3>
+                <p>Soluciones a medida para escalar la operación de tu empresa de forma eficiente.</p>
+                <span class="btn-ver-mas">Ver detalles &rarr;</span>
+            </a>
+
+            <a href="automatizacion.html" class="card">
+                <h3>Automatización IA</h3>
+                <p>Optimizamos tus flujos de trabajo con n8n e Inteligencia Artificial para eliminar procesos manuales.</p>
+                <span class="btn-ver-mas">Ver detalles &rarr;</span>
+            </a>
+
+            <a href="legal.html" class="card">
+                <h3>Asesoramiento Legal</h3>
+                <p>Estrategia, propiedad intelectual y cumplimiento normativo para blindar tu operación.</p>
+                <span class="btn-ver-mas">Ver detalles &rarr;</span>
+            </a>
+
+        </div>
+    </section>
+    <!-- =========================================
+         Sección Metodología
+         ========================================= -->
+    <section id="metodologia" class="seccion-metodologia">
+        
+        <h2>Metodología de Trabajo</h2>
+        <p class="desc-metodologia">No escribimos una sola línea de código sin antes entender el ADN de tu negocio. Así es como nos integramos a tu empresa:</p>
+        
+        <div class="contenedor-pasos">
+            
+            <!-- Paso 1 -->
+            <div class="tarjeta-paso">
+                <div class="numero-neon">01</div>
+                <h3>Reunión Inicial</h3>
+                <p>Agendamos un encuentro virtual para conocer tu historia, el funcionamiento de tu marca y la visión a futuro. Queremos saber de dónde vienes y hacia dónde vas.</p>
+            </div>
+            
+            <!-- Paso 2 -->
+            <div class="tarjeta-paso">
+                <div class="numero-neon">02</div>
+                <h3>Análisis de Necesidades</h3>
+                <p>Auditamos tus procesos actuales para identificar problemas, cuellos de botella y descubrir oportunidades reales de mejora mediante la digitalización.</p>
+            </div>
+            
+            <!-- Paso 3 -->
+            <div class="tarjeta-paso">
+                <div class="numero-neon">03</div>
+                <h3>Objetivos SMART</h3>
+                <p>Definimos metas específicas, medibles, alcanzables, relevantes y con límite de tiempo. Trazamos una hoja de ruta clara para garantizar el éxito del proyecto.</p>
+            </div>
+            
+            <!-- Paso 4 -->
+            <div class="tarjeta-paso">
+                <div class="numero-neon">04</div>
+                <h3>Integración Total</h3>
+                <p>Pasamos a la acción. Nos convertimos en tu socio tecnológico estratégico, funcionando operativamente como una extensión de tu propio equipo.</p>
+            </div>
+
+        </div>
+    </section>
+ 
+            
+<!-- =========================================
+         Sección Nuestro Equipo
+         ========================================= -->
+    <section id="quienes-somos" class="seccion-quienes-somos">
+        
+        <h2>Nuestro Equipo</h2>
+        <p class="desc-ofertas" style="text-align: center; margin-bottom: 40px;">Conoce a las profesionales que integran CyberData y lideran cada solución tecnológica y estratégica.</p>
+
+        <!-- Fila Superior: 2 Integrantes Principales -->
+        <div class="contenedor-fundadores">
+            
+            <!-- Tarjeta Integrante 1 -->
+            <div class="tarjeta-fundador">
+                <img src="img/anita.jpg" alt="Ana Laura Ponce" class="img-fundador">
+                <div class="info-perfil">
+                    <h4>Ana Laura Ponce</h4>
+                    <span class="puesto-neon">Asesora Legal</span>
+                    <p>Visión estratégica y desarrollo de negocios. Experta en estructurar soluciones tecnológicas que escalan empresas y optimizan recursos operativos.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta Integrante 2 -->
+            <div class="tarjeta-fundador">
+                <img src="img/Damian.jpg" alt="Damian Osvaldo Ruiz" class="img-fundador">
+                <div class="info-perfil">
+                    <h4>Damian Osvaldo Ruiz</h4>
+                    <span class="puesto-neon">Ingeniero en Datos</span>
+                    <p>Arquitectura de software y análisis de datos. Especialista en liderar el desarrollo técnico, la implementación de bases de datos y ciencia de datos.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Fila Inferior: 3 Integrantes -->
+        <div class="contenedor-equipo" style="margin-top: 40px;">
+            
+            <!-- Tarjeta Integrante 3 -->
+            <div class="tarjeta-equipo">
+                <img src="img/julia.jpg" alt="Julian Muñoz Velazquez" class="img-equipo-rect">
+                <div class="info-perfil">
+                    <h4>Julian Muñoz Velazquez</h4>
+                    <span class="puesto-neon">Desarrolladora Front-end</span>
+                    <p>Especialista en interfaces de usuario y diseño de experiencias digitales fluidas, interactivas y orientadas a la usabilidad.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta Integrante 4 -->
+            <div class="tarjeta-equipo">
+                <img src="img/lissette.jpg" alt="Lissette Valdes Meza" class="img-equipo-rect">
+                <div class="info-perfil">
+                    <h4>Lissette Valdes Meza</h4>
+                    <span class="puesto-neon">Diseñadora Grafica</span>
+                    <p>Especialista en diseño de marketing. Creadora de Branding y Merchandising, con una visión innovadora y estilo de vanguardia.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta Integrante 5 -->
+            <div class="tarjeta-equipo">
+                <img src="img/diego.jpg" alt="Diego Michienzi" class="img-equipo-rect">
+                <div class="info-perfil">
+                    <h4>Diego Michienzi</h4>
+                    <span class="puesto-neon">Especialista en Marketing</span>
+                    <p>Lic en Community Manager. Experto en gestión de comunidades en línea y estrategias de marketing digital.</p>
+                </div>
+            </div>
+
+        </div>
+    </section></s>
+    <!-- Scripts para el Fondo Animado (Vanta.js + Three.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        // Configuración de la animación en la sección #inicio
+        VANTA.NET({
+            el: "#inicio",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x39ff14, // Verde neón
+            backgroundColor: 0x050505, // Negro profundo
+            points: 12.00,
+            maxDistance: 20.00,
+            spacing: 20.00
+        })
+    </script>
+</body>
+
+<!-- =========================================
+         Script del Panel de Presupuesto (Carrito)
+         ========================================= -->
+    <script>
+        // Número de WhatsApp configurado
+        const NUMERO_WHATSAPP = "542613672949"; 
+        
+        // 1. Leer los servicios de la memoria del navegador
+        let serviciosElegidos = JSON.parse(localStorage.getItem('carritoCyberData')) || [];
+        
+        const listaHTML = document.getElementById('lista-servicios-elegidos');
+        const btnEnviar = document.getElementById('btn-enviar-presupuesto');
+        const botonesAgregar = document.querySelectorAll('.btn-agregar');
+
+        // 2. Función para actualizar lo que se ve en pantalla
+        function actualizarPanel() {
+            if (!listaHTML) return;
+            
+            listaHTML.innerHTML = ''; 
+            
+            if (serviciosElegidos.length === 0) {
+                listaHTML.innerHTML = '<li class="mensaje-vacio">Aún no has seleccionado servicios.</li>';
+                if (btnEnviar) {
+                    btnEnviar.href = "#"; 
+                    btnEnviar.style.opacity = "0.5"; 
+                    btnEnviar.style.pointerEvents = "none"; 
+                }
+            } else {
+                let textoWhatsApp = "Hola CyberData, me gustaría solicitar un presupuesto para los siguientes servicios:%0A";
+                
+                serviciosElegidos.forEach((servicio, index) => {
+                    const li = document.createElement('li');
+                    
+                    // Solo el texto del servicio limpio
+                    li.textContent = servicio;
+                    
+                    // Estilo visual para indicar que es interactivo (cursor de mano y efecto al pasar el mouse)
+                    li.style.cursor = "pointer";
+                    li.title = "Haz clic para quitar este servicio";
+                    
+                    // Al hacer clic en el título del servicio, se elimina de la lista
+                    li.addEventListener('click', function() {
+                        serviciosElegidos.splice(index, 1); // Borra este servicio específico
+                        actualizarPanel(); // Actualiza el panel y el localStorage
+                    });
+
+                    listaHTML.appendChild(li);
+                    textoWhatsApp += "%0A- " + servicio;
+                });
+                
+                if (btnEnviar) {
+                    btnEnviar.href = `https://wa.me/${NUMERO_WHATSAPP}?text=${textoWhatsApp}`;
+                    btnEnviar.style.opacity = "1";
+                    btnEnviar.style.pointerEvents = "auto";
+                }
+            }
+            
+            // Guardar los datos actualizados en la memoria
+            localStorage.setItem('carritoCyberData', JSON.stringify(serviciosElegidos));
+        }
+
+        // 3. Hacer que los botones de las tarjetas funcionen al hacer clic (si existen en la página)
+        if (botonesAgregar.length > 0) {
+            botonesAgregar.forEach(boton => {
+                boton.addEventListener('click', function() {
+                    const nombreServicio = this.getAttribute('data-servicio');
+                    
+                    if (!serviciosElegidos.includes(nombreServicio)) {
+                        serviciosElegidos.push(nombreServicio);
+                        actualizarPanel();
+                        
+                        const textoOriginal = this.textContent;
+                        this.textContent = "¡Agregado!";
+                        this.style.backgroundColor = "var(--accent-color)";
+                        this.style.color = "#000";
+                        
+                        setTimeout(() => {
+                            this.textContent = textoOriginal;
+                            this.style.backgroundColor = "";
+                            this.style.color = "";
+                        }, 1500);
+                    } else {
+                        this.textContent = "Ya está en la lista";
+                        setTimeout(() => {
+                            this.textContent = "+ Agregar";
+                        }, 1500);
+                    }
+                });
+            });
+        }
+
+        // 4. Arrancar el panel apenas carga la página
+        actualizarPanel();
+    </script>
+    
+</html>

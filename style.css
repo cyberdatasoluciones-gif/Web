@@ -1,0 +1,668 @@
+/* =========================================
+   Variables de Color y Tipografía
+   ========================================= */
+:root {
+    --bg-color: #050505; /* Fondo negro profundo */
+    --card-bg: #3b2d52; /* Fondo de tarjetas ligeramente más claro */
+    --text-main: #e0e0e0; /* Texto gris claro para buena lectura */
+    --accent-color: #7edf6d; /* Verde neón digital */
+    --accent-hover: #72cf5f;
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-mono: 'Courier New', Courier, monospace; /* Toque hacker/código para títulos */
+}
+
+/* =========================================
+   Reset Básico
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: var(--font-mono);
+    color: #ffffff;
+    font-weight: normal;
+}
+
+span {
+    color: var(--accent-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+
+/* =========================================
+   Header y Navegación
+   ========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #000000;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Botones estilo flat 2D */
+.btn-cta, .btn-main {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-cta:hover, .btn-main:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+/* =========================================
+   Sección Hero (Presentación)
+   ========================================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 5%;
+    min-height: 80vh;
+    gap: 3rem;
+}
+
+.hero-contenido {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #a0a0a0;
+}
+
+.hero-imagen {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-imagen img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    /* Efecto de borde plano y sombra neón sutil */
+    border: 2px solid #333;
+    box-shadow: 10px 10px 0px rgba(57, 255, 20, 0.1); 
+}
+
+/* =========================================
+   Sección Servicios
+   ========================================= */
+#servicios {
+    padding: 5rem 5%;
+    background-color: #0a0a0a;
+}
+
+#servicios h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea exactamente 3 columnas iguales */
+    gap: 30px;                             /* Espacio de separación entre las tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Tarjetas (Flat Design) */
+.card {
+    background-color: var(--card-bg);
+    padding: 2.5rem 2rem;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.card p {
+    color: #999;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   Responsive (Pantallas pequeñas)
+   ========================================= */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse; /* Imagen arriba, texto abajo en móvil */
+        text-align: center;
+        padding: 3rem 5%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        display: none; /* Ocultar menú en móviles por simplicidad (requeriría un menú hamburguesa) */
+    }
+}
+/* =========================================
+   Tarjetas de Servicios (Ahora como Enlaces)
+   ========================================= */
+.card {
+    background-color: var(--card-bg);
+    padding: 2.5rem 2rem;
+    border: 1px solid #564e64;
+    transition: all 0.3s ease;
+    display: flex;             /* Usamos flex para posicionar el botón abajo */
+    flex-direction: column; 
+    text-decoration: none;     /* Quitamos el subrayado del enlace */
+    position: relative;        /* Para efectos adicionales */
+}
+
+/* Efecto al pasar el ratón */
+.card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-8px); /* Salta un poco más alto para indicar que es clickeable */
+    box-shadow: 0 10px 20px rgba(57, 255, 20, 0.05); /* Sombra neón sutil */
+    cursor: pointer;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+/* El título se pone verde cuando pasas el ratón por la tarjeta */
+.card:hover h3 {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+.card p {
+    color: #999;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem; /* Separación del botón */
+    flex-grow: 1;          /* Empuja el botón "Ver detalles" hacia abajo */
+}
+
+/* Estilo para el nuevo enlace "Ver detalles" dentro de la tarjeta */
+.btn-ver-mas {
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* La flecha se mueve a la derecha al hacer hover */
+.card:hover .btn-ver-mas {
+    transform: translateX(5px); 
+}
+/* =========================================
+   Sección Quiénes Somos (Fundadores y Equipo)
+   ========================================= */
+.seccion-quienes-somos {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.seccion-quienes-somos h2 {
+    font-family: var(--font-mono);
+    color: var(--text-main);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.subtitulo-seccion {
+    font-family: var(--font-mono);
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Margen extra para separar a los fundadores del equipo */
+.mt-grande {
+    margin-top: 80px; 
+}
+
+/* Contenedores Flexbox para alinear las tarjetas */
+.contenedor-fundadores, .contenedor-equipo {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que las tarjetas bajen en celulares */
+}
+
+/* Estilo base de todas las tarjetas */
+.tarjeta-fundador, .tarjeta-equipo {
+    background-color: var(--card-bg);
+    border: 1px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Efecto hover general */
+.tarjeta-fundador:hover, .tarjeta-equipo:hover {
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+    transform: translateY(-5px);
+}
+
+/* Anchos diferenciados: Fundadores (2 columnas) vs Equipo (3 columnas) */
+.tarjeta-fundador {
+    width: 45%; 
+    min-width: 320px;
+}
+
+.tarjeta-equipo {
+    width: 30%;
+    min-width: 280px;
+    padding: 25px; /* Ligeramente menos padding que las grandes */
+}
+
+/* =========================================
+   Unificación de Imágenes del Equipo
+   ========================================= */
+
+/* Estilo unificado rectangular para las 5 tarjetas */
+.img-fundador, 
+.img-equipo-rect {
+    width: 100%;            /* Ocupa todo el ancho de su tarjeta */
+    height: 220px;          /* Altura fija idéntica para todas las fotos (puedes ajustarla a 200px o 250px si prefieres) */
+    object-fit: cover;      /* Evita que la foto se deforme o estire, recortándola proporcionalmente */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados sutiles arriba si tu tarjeta tiene bordes */
+    display: block;
+}
+
+/* Imagen Rectangular (Equipo) */
+.img-equipo-rect {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px; /* Rectángulo con bordes suaves */
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+    margin-bottom: 20px;
+}
+
+/* Tipografía de la información interna */
+.info-perfil h4 {
+    font-family: var(--font-mono);
+    color: var(--text-main);
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.puesto-neon {
+    display: inline-block;
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-perfil p {
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+/* =========================================
+   Sección Metodología
+   ========================================= */
+.seccion-metodologia {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.seccion-metodologia h2 {
+    font-family: var(--font-mono);
+    color: var(--text-main);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.desc-metodologia {
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Flexbox para alinear los 4 pasos */
+.contenedor-pasos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que bajen en pantallas pequeñas */
+}
+
+/* Estructura de la tarjeta de paso */
+.tarjeta-paso {
+    background-color: var(--card-bg);
+    border: 1px solid transparent; /* Borde invisible por defecto */
+    border-top: 3px solid var(--accent-color); /* Línea superior neón permanente */
+    border-radius: 8px;
+    padding: 40px 25px;
+    width: 22%; /* Ocupan un cuarto del espacio */
+    min-width: 260px; /* Tamaño mínimo para móviles */
+    transition: all 0.3s ease;
+    text-align: left; /* Alineamos el texto a la izquierda para mejor lectura */
+}
+
+/* Efecto hover interactivo */
+.tarjeta-paso:hover {
+    box-shadow: 0 10px 30px rgba(57, 255, 20, 0.15); /* Sombra verde */
+    transform: translateY(-10px); /* Se eleva ligeramente */
+    border-color: var(--accent-color); /* El borde invisible se vuelve verde */
+}
+
+/* Números grandes estilo Cyberpunk */
+.numero-neon {
+    font-family: var(--font-mono);
+    color: var(--accent-color);
+    font-size: 3.5rem;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.tarjeta-paso h3 {
+    font-family: var(--font-mono);
+    color: var(--text-main);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-paso p {
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+/* =========================================
+   Panel de Presupuesto (Carrito Lateral)
+   ========================================= */
+.panel-presupuesto {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: rgba(18, 18, 18, 0.95); /* Fondo oscuro semitransparente */
+    border: 1px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 20px;
+    z-index: 1000; /* Asegura que flote por encima de todo */
+    box-shadow: 0 5px 20px rgba(57, 255, 20, 0.2);
+}
+
+.panel-presupuesto h3 {
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.lista-elegidos {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    min-height: 50px;
+}
+
+.lista-elegidos li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.lista-elegidos li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.mensaje-vacio {
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.mensaje-vacio::before {
+    display: none; /* Oculta la flechita si está vacío */
+}
+
+.btn-bloque {
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón de Agregar en las tarjetas */
+.btn-agregar {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--text-main);
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-agregar:hover {
+    background-color: var(--accent-color);
+    color: #000;
+    border-color: var(--accent-color);
+}
+/* =========================================
+   Estilos de la Sección: Ofertas del Mes
+   ========================================= */
+#ofertas-mes {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%);
+    border-top: 1px dashed rgba(57, 255, 20, 0.3);
+    border-bottom: 1px dashed rgba(57, 255, 20, 0.3);
+    text-align: center;
+}
+
+#ofertas-mes h2 {
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    color: var(--accent-color, #39ff14);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+.desc-ofertas {
+    color: #cccccc;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+}
+
+/* Grilla de Canvas para las Ofertas */
+.contenedor-ofertas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Diseño de cada Tarjeta / Canvas de Oferta */
+.tarjeta-oferta {
+    background-color: rgba(15, 15, 15, 0.9);
+    border: 1px solid rgba(57, 255, 20, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta-oferta:hover {
+    border-color: var(--accent-color, #39ff14);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(57, 255, 20, 0.15);
+}
+
+/* Etiqueta flotante de Pack */
+.badge-oferta {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(57, 255, 20, 0.1);
+    color: var(--accent-color, #39ff14);
+    border: 1px solid var(--accent-color, #39ff14);
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.tarjeta-oferta h3 {
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    padding-right: 60px; /* Espacio para que no choque con el badge */
+}
+
+.tarjeta-oferta p {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.95rem;
+    color: #cccccc;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.tarjeta-oferta p strong {
+    color: var(--accent-color, #39ff14);
+}
+
+.oferta-beneficio {
+    font-size: 0.88rem;
+    color: #999999;
+    border-top: 1px solid rgba(255, 255, 20, 0.1);
+    padding-top: 12px;
+    margin-top: 15px;
+}
+/* Asegurar posicionamiento para el botón interno */
+.tarjeta-oferta {
+    position: relative;
+    padding-bottom: 70px; /* Deja espacio abajo para que el botón no pise el texto */
+}
+
+/* Ubicar el botón de agregar abajo a la derecha en las tarjetas de oferta */
+.tarjeta-oferta .btn-agregar {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    top: auto; /* Anula la posición superior previa si la tuviera */
+}
+/* Botón más compacto y elegante para las ofertas del mes */
+.tarjeta-oferta .btn-agregar {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    box-shadow: 0 2px 10px rgba(57, 255, 20, 0.2);
+}
+
+.tarjeta-oferta .btn-agregar:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.4);
+}

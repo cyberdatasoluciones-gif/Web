@@ -1,0 +1,567 @@
+/* =========================================
+   NÚCLEO DE DISEÑO (Copiar en todos los CSS)
+   ========================================= */
+:root {
+    --bg-color: #050505; 
+    --card-bg: #121212; /* O #3b2d52 si prefieres el fondo de la principal */
+    --text-main: #e0e0e0; 
+    --accent-color: #6ac25a; /* Verde neón */
+    --accent-hover: #5abe67;
+    
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-mono: 'Courier New', Courier, monospace;
+}
+
+/* Aplicación global de fuentes y fondo */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, .logo {
+    font-family: var(--font-mono);
+}
+.servicio-hero {
+    text-align: center;
+    padding: 6rem 5% 3rem;
+    background-color: #050505;
+    border-bottom: 1px solid #222;
+}
+
+.servicio-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.servicio-hero p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.servicio-detalle {
+    padding: 4rem 5%;
+    background-color: #0a0a0a;
+    min-height: 50vh;
+}
+
+.detalle-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border: 1px solid #222;
+    border-radius: 8px;
+}
+
+.detalle-contenido h2 {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+
+/* Lista de ítems estilo tecnológico */
+.lista-items {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.lista-items li {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Viñeta verde neón personalizada */
+.lista-items li::before {
+    content: "▹"; /* Símbolo tipo terminal de código */
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.lista-items strong {
+    color: #ffffff;
+    font-family: var(--font-mono);
+}
+
+.acciones-servicio {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.btn-volver {
+    color: #999;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+
+.btn-volver:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .detalle-contenido {
+        padding: 1.5rem;
+    }
+    .acciones-servicio {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* =========================================
+   Estilos específicos para layout Vertical (marketing.html)
+   ========================================= */
+
+.servicio-hero-animado {
+    /* Ajustamos la altura para que no sea tan alta como el inicio, pero deje ver la animación */
+    min-height: 50vh; 
+}
+
+.layout-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: transparent; /* Quitamos el fondo general de la caja grande */
+    border: none;
+    padding: 0;
+}
+
+.layout-vertical h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    border-bottom: none;
+}
+
+/* Tarjetas horizontales/verticales para cada ítem */
+.tarjeta-vertical {
+    background-color: var(--card-bg);
+    border: 1px solid #222;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-vertical:hover {
+    border-color: var(--accent-color);
+    box-shadow: -5px 0 0 var(--accent-color); /* Raya verde a la izquierda al hacer hover */
+    transform: translateX(5px); /* Se desplaza un poco a la derecha */
+}
+
+.tarjeta-vertical h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-mono);
+}
+
+.tarjeta-vertical p {
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.viñeta {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.layout-vertical .acciones-servicio {
+    justify-content: center;
+    margin-top: 3rem;
+}
+.tarjeta-vertical {
+    position: relative; /* ESTO ES LO NUEVO Y MÁS IMPORTANTE */
+    
+    background-color: var(--card-bg);
+    border: 1px solid var(--accent-color);
+    /* ... (deja el resto de estilos que ya tenías aquí) ... */
+}
+/* =========================================
+   1. CORRECCIÓN DEL HEADER (ELIMINAR LO BLANCO)
+   ========================================= */
+header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1.5rem 5% !important;
+    background-color: #000000 !important; /* Fuerza el fondo negro */
+    border-bottom: 1px solid #333 !important;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none !important; /* Quita los puntos */
+    display: flex !important; /* Pone los enlaces en horizontal */
+    gap: 2rem !important;
+    align-items: center !important;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none !important; /* Quita la línea subrayada azul */
+    color: #e0e0e0 !important; /* Letra clara */
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #39ff14 !important; /* Verde neón al pasar el mouse */
+}
+
+/* =========================================
+   2. CORRECCIÓN DEL TEXTO EN LA PORTADA ANIMADA
+   ========================================= */
+.servicio-hero-animado {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60vh; /* Altura de la portada */
+}
+
+.servicio-hero-animado .hero-contenido {
+    position: relative;
+    z-index: 10; /* Obliga al texto a estar POR ENCIMA de la animación */
+    /* Caja oscura semitransparente para que el texto resalte sobre los rayos */
+    background: rgba(5, 5, 5, 0.7); 
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid rgba(57, 255, 20, 0.3); /* Borde verde sutil */
+    max-width: 800px;
+}
+
+.servicio-hero-animado h1 {
+    color: #ffffff !important; /* Texto en blanco brillante */
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.servicio-hero-animado h1 span {
+    color: #39ff14 !important; /* La frase "Potenciamos tu idea" en verde neón */
+}
+
+.servicio-hero-animado p {
+    color: #cccccc !important;
+    font-size: 1.2rem;
+}
+/* =========================================
+   Imágenes dentro de las tarjetas verticales
+   ========================================= */
+
+/* Quitamos el padding interno de la tarjeta para que la imagen ocupe todo el ancho superior */
+.tarjeta-vertical {
+    padding: 0; 
+    overflow: hidden;
+}
+
+/* Ajustamos el padding solo para los textos */
+.tarjeta-vertical h3, 
+.tarjeta-vertical p {
+    padding: 0 2rem;
+}
+
+.tarjeta-vertical p {
+    padding-bottom: 2rem; /* Espacio debajo del párrafo */
+}
+
+.tarjeta-vertical h3 {
+    margin-top: 1.5rem;
+}
+
+/* Estilo de la imagen */
+.img-tarjeta {
+    width: 100%;
+    height: 250px; /* Altura fija para que todas se vean iguales */
+    object-fit: cover; /* Evita que la imagen se deforme */
+    border-bottom: 1px solid #222;
+    filter: grayscale(100%) contrast(110%); /* Efecto blanco y negro apagado */
+    transition: all 0.4s ease;
+}
+
+/* Efecto al pasar el ratón */
+.tarjeta-vertical:hover .img-tarjeta {
+    filter: grayscale(0%) contrast(100%); /* Vuelve al color real */
+    border-bottom-color: var(--accent-color); /* Línea divisoria verde neón */
+}
+.img-tarjeta {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px; /* Opcional para redondear bordes */
+}
+.img-tarjeta {
+    display: block;
+    width: 100%;
+    max-width: 100%; /* Asegura que no se desborde de la tarjeta */
+    height: auto;    /* Mantiene la proporción original de la imagen */
+    object-fit: cover; /* Evita que la imagen se deforme */
+    margin-bottom: 15px; /* Separa la imagen del título */
+    border-radius: 8px; /* Opcional: le da un toque moderno con bordes suaves */
+}
+/* Nuevo estilo del botón Agregar flotante */
+.btn-agregar {
+    position: absolute;
+    top: 25px; /* Distancia desde arriba (ajústalo si tu tarjeta tiene más/menos padding) */
+    right: 25px; /* Distancia desde la derecha */
+    background-color: var(--accent-color); /* Fondo verde neón sólido */
+    color: #050505; /* Texto oscuro para máximo contraste */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.4); /* Resplandor neón */
+    transition: all 0.3s ease;
+    z-index: 10; /* Asegura que flote por encima de la imagen */
+}
+
+/* Efecto al pasar el mouse */
+.btn-agregar:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05); /* Se agranda un poquito */
+    box-shadow: 0 6px 20px rgba(57, 255, 20, 0.6);
+}/* =========================================
+   1. Ajuste de las Tarjetas (Crucial para el botón)
+   ========================================= */
+.tarjeta-vertical {
+    position: relative; /* Esto es vital para que el botón no se escape de la tarjeta */
+}
+
+/* =========================================
+   2. Diseño del Botón Flotante (+ Agregar)
+   ========================================= */
+.btn-agregar {
+    position: absolute;
+    top: 25px; 
+    right: 25px; 
+    background-color: var(--accent-color, #32e098); /* Verde neón */
+    color: #050505; 
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.4); 
+    transition: all 0.3s ease;
+    z-index: 10; 
+}
+
+.btn-agregar:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.05); 
+    box-shadow: 0 6px 20px rgba(57, 255, 20, 0.6);
+}
+
+/* =========================================
+   3. Panel Flotante Lateral (El "Carrito")
+   ========================================= */
+.panel-presupuesto {
+    position: fixed; /* Se queda quieto aunque el cliente baje por la página */
+    top: 120px; /* Distancia desde el techo de la pantalla */
+    right: 20px; /* Pegado a la derecha */
+    width: 320px; /* Ancho del panel */
+    background-color: rgba(10, 10, 10, 0.95); /* Fondo muy oscuro y casi opaco */
+    border: 1px solid var(--accent-color, #14dcff);
+    border-radius: 12px;
+    padding: 25px;
+    z-index: 1000; /* Asegura que flote por encima de las tarjetas y el fondo */
+    box-shadow: 0 5px 25px rgba(57, 255, 20, 0.15);
+    backdrop-filter: blur(5px); /* Efecto de vidrio esmerilado detrás */
+}
+
+.panel-presupuesto h3 {
+    color: var(--accent-color, #3ba183);
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed var(--accent-color, #ff7e14);
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* =========================================
+   4. Lista de Servicios Elegidos
+   ========================================= */
+.lista-elegidos {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    color: var(--text-main, #ffffff);
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.95rem;
+    min-height: 60px; /* Evita que el panel se encoja mucho si está vacío */
+}
+
+.lista-elegidos li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.lista-elegidos li::before {
+    content: "▹"; /* Flechita neón antes de cada servicio */
+    position: absolute;
+    left: 0;
+    color: var(--accent-color, #5dac4f);
+}
+
+.mensaje-vacio {
+    opacity: 0.5;
+    font-style: italic;
+    text-align: center;
+}
+
+.mensaje-vacio::before {
+    display: none; /* Oculta la flechita si no hay servicios */
+}
+
+/* =========================================
+   5. Ajuste del Botón Final (Solicitar)
+   ========================================= */
+.btn-bloque {
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+/* =========================================
+   Panel de Presupuesto (Carrito Lateral)
+   ========================================= */
+.panel-presupuesto {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: rgba(18, 18, 18, 0.95); /* Fondo oscuro semitransparente */
+    border: 1px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 20px;
+    z-index: 1000; /* Asegura que flote por encima de todo */
+    box-shadow: 0 5px 20px rgba(82, 156, 68, 0.247);
+}
+
+.panel-presupuesto h3 {
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.lista-elegidos {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    min-height: 50px;
+}
+
+.lista-elegidos li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.lista-elegidos li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.mensaje-vacio {
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.mensaje-vacio::before {
+    display: none; /* Oculta la flechita si está vacío */
+}
+
+.btn-bloque {
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón de Agregar en las tarjetas */
+.btn-agregar {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--text-main);
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-agregar:hover {
+    background-color: var(--accent-color);
+    color: #000;
+    border-color: var(--accent-color);
+}
+/* Estilo unificado para el botón principal de CTA y del Panel */
+.btn-main {
+    background-color: var(--accent-color, #3f856a);
+    color: #050505;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: var(--font-mono, 'Space Mono', monospace);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(20, 255, 184, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-main:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(40, 163, 112, 0.5);
+}
+
+/* Clase para que ocupe todo el ancho del panel flotante */
+.btn-bloque {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
